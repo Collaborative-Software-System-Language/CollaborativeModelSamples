@@ -1,2 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cm:CollaborativeModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cm="http://cm/1.0"/>
+<cm:CollaborativeModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cm="http://cm/1.0" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" name="First">
+  <packagedElement xsi:type="cm:Workspace" name="Workspace1"/>
+  <packagedElement xsi:type="cm:CollaborativeActivity" name="CollaborativeActivity1">
+    <ownedBehavior xsi:type="uml:ProtocolStateMachine">
+      <region/>
+    </ownedBehavior>
+  </packagedElement>
+  <packagedElement xsi:type="cm:CollaborationRole" name="Role1"/>
+  <packagedElement xsi:type="cm:Tool" name="Tool1"/>
+  <packagedElement xsi:type="cm:BelongsRelationship" memberEnd="//@packagedElement.4/@ownedEnd.0 //@packagedElement.4/@ownedEnd.1">
+    <ownedEnd type="//Workspace1" association="//@packagedElement.4"/>
+    <ownedEnd type="//CollaborativeActivity1" association="//@packagedElement.4"/>
+  </packagedElement>
+  <packagedElement xsi:type="cm:UseRelationship" memberEnd="//@packagedElement.5/@ownedEnd.0 //@packagedElement.5/@ownedEnd.1">
+    <ownedEnd type="//CollaborativeActivity1" association="//@packagedElement.5"/>
+    <ownedEnd type="//Tool1" association="//@packagedElement.5"/>
+  </packagedElement>
+  <packagedElement xsi:type="cm:ParticipationRelationship" memberEnd="//@packagedElement.6/@ownedEnd.0 //@packagedElement.6/@ownedEnd.1">
+    <ownedEnd type="//CollaborativeActivity1" association="//@packagedElement.6"/>
+    <ownedEnd type="//Role1" association="//@packagedElement.6"/>
+  </packagedElement>
+</cm:CollaborativeModel>
